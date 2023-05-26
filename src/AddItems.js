@@ -8,7 +8,7 @@ function AddItems(props) {
 
   const AddButton = (event) => {
     event.preventDefault();
-    props.AddItems({ name, price, type, brand });
+    props.AddItems({name, price, type, brand });
     setName("");
     setPrice(0);
     setType("");

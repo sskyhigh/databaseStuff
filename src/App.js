@@ -14,7 +14,7 @@ function App() {
 
   const addItemsToData = (item) => {
     let items = data["items"];
-    items.id = items.length;
+  
     const request = {
       method: "POST",
       headers: {
@@ -24,13 +24,14 @@ function App() {
     };
     fetch("http://localhost:3000/items", request)
       .then((response) => {
+        console.log(response);
         response.json()
+        .then((data) => {
+          items.push(data);
+          setData({ items: items });
+          console.log(data);
+        });
       })
-      .then((data) => {
-        items.push(data);
-        setData({ items: items });
-        
-      });
     console.log(data);
   };
 
