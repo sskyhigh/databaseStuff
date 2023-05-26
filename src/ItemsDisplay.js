@@ -3,7 +3,7 @@ function ItemsDisplay(props) {
   const display = (item) => {
     return (
       <tr>
-        {/* <th scope="row">{item.id}</th> */}
+        <th scope="row">{item.id}</th>
         <td>{item.name}</td>
         <td> {item.price}</td>
         <td>{item.type}</td>
