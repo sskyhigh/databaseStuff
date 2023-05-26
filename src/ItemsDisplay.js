@@ -1,4 +1,5 @@
 function ItemsDisplay(props) {
+  //console.log(props);
   const display = (item) => {
     return (
       <tr>
